@@ -1,1 +1,1 @@
-Aplikasi Pembayaran SPP berbasis website dibuat menggunakan framework laravel
+Aplikasi Pengaduan Masyarakat berbasis website dibuat menggunakan framework laravel
