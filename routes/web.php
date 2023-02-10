@@ -15,7 +15,23 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('beranda');
+
+Route::get('dashboard/pengaduan', function () {
+    return view('pages.admin.pengaduan.index');
+})->name('dashboard-pengaduan');
+
+Route::get('/dashboard/masyarakat', function () {
+    return view('pages.admin.masyarakat.index');
+})->name('dashboard-masyarakat');
+
+Route::get('/dashboard/petugas', function () {
+    return view('pages.admin.petugas.index');
+})->name('dashboard-petugas');
+
+Route::get('/dashboard/laporan', function () {
+    return view('pages.admin.laporan.index');
+})->name('dashboard-laporan');
 
 Route::middleware([
     'auth:sanctum',
@@ -23,6 +39,6 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('pages.admin.dashboard');
     })->name('dashboard');
 });
