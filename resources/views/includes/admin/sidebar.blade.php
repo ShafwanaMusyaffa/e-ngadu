@@ -30,5 +30,13 @@
         <p>Laporan</p>
       </a>
     </li>
+    <li>
+      <form action="{{ route('logout') }}" method="post">
+        @csrf
+        <button class="btn" type="submit">
+          <p>Logout</p>
+        </button>
+      </form>
+    </li>
   </ul>
 </div>
